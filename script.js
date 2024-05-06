@@ -1,12 +1,15 @@
-let colorlist = ['gold', 'yellow', 'turquoise', 'red']
+let img;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  background(255);
+  createCanvas(1400, 701);
+  img = loadImage("background.jpg");
+  imgS = loadImage("spaik.png");
+  imgP = loadImage("paiper.png");
 }
 
 function draw() {
-  noStroke()
-  fill(random(colorlist));
-  ellipse(mouseX, mouseY, 25, 25);
+  background(img);
+ image(img, 0, 0);
+  image(imgS, 20, mouseY, 200, 200);
+  
 }
